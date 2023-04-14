@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AnimationChainArraySave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FileRelativeTextures>true</FileRelativeTextures>
+  <TimeMeasurementUnit>Undefined</TimeMeasurementUnit>
+  <CoordinateType>Pixel</CoordinateType>
+  <AnimationChain>
+    <Name>IdleRight</Name>
+    <Frame>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>32</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>128</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>64</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>32</LeftCoordinate>
+      <RightCoordinate>64</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>64</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>128</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>IdleLeft</Name>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>32</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>128</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>64</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>32</LeftCoordinate>
+      <RightCoordinate>64</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>64</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>128</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>32</BottomCoordinate>
+      <RelativeY>12</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>RunRight</Name>
+    <Frame>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>64</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>64</LeftCoordinate>
+      <RightCoordinate>128</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>128</LeftCoordinate>
+      <RightCoordinate>192</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>192</LeftCoordinate>
+      <RightCoordinate>256</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>256</LeftCoordinate>
+      <RightCoordinate>320</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>320</LeftCoordinate>
+      <RightCoordinate>384</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>RunLeft</Name>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>64</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>64</LeftCoordinate>
+      <RightCoordinate>128</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>128</LeftCoordinate>
+      <RightCoordinate>192</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>192</LeftCoordinate>
+      <RightCoordinate>256</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>256</LeftCoordinate>
+      <RightCoordinate>320</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>knight/run/run-sheet.png</TextureName>
+      <FrameLength>0.17</FrameLength>
+      <LeftCoordinate>320</LeftCoordinate>
+      <RightCoordinate>384</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>64</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <ProjectFile>../../../pixeldungeonjam.gluj</ProjectFile>
+</AnimationChainArraySave>

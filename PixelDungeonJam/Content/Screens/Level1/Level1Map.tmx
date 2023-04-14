@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="1">
+ <tileset firstgid="1" source="../../StandardTileset.tsx"/>
+ <tileset firstgid="1025" name="GreenWoods" tilewidth="16" tileheight="16" tilecount="625" columns="25">
+  <image source="../GreenWoods/Tiles.png" width="400" height="400"/>
+ </tileset>
+ <tileset firstgid="1650" name="WoodsProps" tilewidth="16" tileheight="16" tilecount="625" columns="25">
+  <image source="../GreenWoods/Props.png" width="400" height="400"/>
+ </tileset>
+ <tileset firstgid="2275" name="WoodsTrees" tilewidth="16" tileheight="16" tilecount="330" columns="15">
+  <image source="../GreenWoods/Trees.png" width="240" height="352"/>
+ </tileset>
+ <layer id="3" name="Floor1" width="32" height="32">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3PMREAIAwEwRRYCjLAvxuigm+2uLl6e1XtqUM/0w0+5ebn5+fn5+fn5+fn5+fn//kHtJEE4gAQAAA=
+  </data>
+ </layer>
+ <layer id="5" name="Floor1Objects" width="32" height="32">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3OMREAMAgEQVpcREGCf3XBBQW7M1/fRwAAsNnJufbt9uvV4AeALT6NA0ITABAAAA==
+  </data>
+ </layer>
+ <layer id="2" name="Floor2" width="32" height="32">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2U603DMBSFQzEdouUxBE3bIUrMEiDBEEDLELQpQ/BaAsaAMeAHx5KvdHJJw49cC1HlSJ9c2cn97NskWdalS5f/kB2XZT2wG3ENyPoe6Ds79xDsRw4akPVDcNTSz+6cGDcg6xMwbeHXbl1f8GrNyj/4xe0jBf229B/j3hHVq3OLv0jgn+Hekw1u7n9BpDy/uDmevLyHFH7pr/b7mh6kOr/2F676DP6FP3c/R2t/vsGv3Sn8+rmWkef5HQycggtwaeRnF+9Dn5ndC3Db0l/3rdd74GvYvQb3Rn7vqn3X/4lcY+UOmamea3TfLd0hZ6hx7qrfljpSuEOuUOca3BCv4E3NzRO4Q+5QawlWoIzjO/hQc2UCd8gD6j2CJ/Acx0/wpebC+GLs7rL9+QYQ7LhVABAAAA==
+  </data>
+ </layer>
+ <layer id="1" name="GameplayLayer" width="32" height="32" visible="0" tintcolor="#ffffff">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3XUQ6DIAwA0HKTHWVH4UvZLfblOTgKR1sbQrYQUUrtGhKbNEQxPrRBxAGAM06ruP3bn81fAPwG8AwA8SzxurRc6JONGZnjbY6B44/YJfA9PCS+xKbAWrxHfakt9TehLfWDFFfyqS40x47ml6Yfvm2y8Nfc57H1Fj59V1xuo4XPCUv/dVCjPb8+lvjFbtVI0z+zW34dI36PreX32r3+mu95ud3r0zwv35qSpe/3XKjsnnWdsf6nvf1KvY/hrtMz/H9qjm+G5/+Hb5kf7W2XFAAQAAA=
+  </data>
+ </layer>
+ <layer id="7" name="ObjectsInFront" width="32" height="32">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3NsRFAQABE0eWSu4xrwOi/LDSAAmygBhv4b+bHXwIAAH+2VWl3R838T38vd4f+Q5NGV1rmP/k7ux76L+93Df0BAN95AJL7bJwAEAAA
+  </data>
+ </layer>
+</map>
