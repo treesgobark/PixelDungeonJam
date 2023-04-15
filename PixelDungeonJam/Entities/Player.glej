@@ -18,6 +18,19 @@
       "IsSharedStatic": true,
       "RuntimeType": "FlatRedBall.Graphics.Animation.AnimationChainList",
       "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "Entities/Player/TakeDamage.wav",
+      "Properties": [
+        {
+          "Name": "UseContentPipeline",
+          "Value": true,
+          "Type": "Boolean"
+        }
+      ],
+      "IsSharedStatic": true,
+      "RuntimeType": "Microsoft.Xna.Framework.Audio.SoundEffect",
+      "ProjectsToExcludeFrom": []
     }
   ],
   "CustomVariables": [
@@ -58,23 +71,6 @@
       "Properties": [
         {
           "Name": "Type",
-          "Value": "int",
-          "Type": "String"
-        },
-        {
-          "Name": "CreatesProperties",
-          "Value": true,
-          "Type": "Boolean"
-        }
-      ],
-      "Name": "TeamIndex",
-      "DefaultValue": 0,
-      "SetByDerived": true
-    },
-    {
-      "Properties": [
-        {
-          "Name": "Type",
           "Value": "decimal",
           "Type": "String"
         },
@@ -86,6 +82,42 @@
       ],
       "Name": "MaxHealth",
       "DefaultValue": 100.0,
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "InvulnTime",
+      "DefaultValue": 0.2,
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "SpriteOffsetY",
+      "DefaultValue": 16.0,
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "FlashStrength",
+      "DefaultValue": 0.5,
       "SetByDerived": true
     }
   ],
@@ -150,6 +182,42 @@
           "Member": "TextureScale",
           "Value": 1.0,
           "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Red",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "FlatRedBall.Graphics.ColorOperation",
+          "Member": "ColorOperation",
+          "Value": 3,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Green",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Blue",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "X",
+          "Value": -8.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": 0.0,
+          "Time": 0.0
         }
       ],
       "SourceType": 2,
@@ -158,7 +226,7 @@
       "GenerateTimedEmit": true
     },
     {
-      "InstanceName": "CircleInstance",
+      "InstanceName": "SolidBounds",
       "SourceClassType": "FlatRedBall.Math.Geometry.Circle",
       "Properties": [
         {
@@ -184,10 +252,75 @@
           "Member": "Visible",
           "Value": false,
           "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "X",
+          "Value": 0.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": 0.0,
+          "Time": 0.0
         }
       ],
       "SourceType": 2,
       "SourceFile": "Circle",
+      "HasPublicProperty": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "Hurtbox",
+      "SourceClassType": "FlatRedBall.Math.Geometry.AxisAlignedRectangle",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "SourceType",
+          "Value": 2,
+          "Type": "SourceType"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Height",
+          "Value": 32.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Width",
+          "Value": 16.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "X",
+          "Value": 0.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": 16.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "bool",
+          "Member": "Visible",
+          "Value": false,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "AxisAlignedRectangle",
       "HasPublicProperty": true,
       "AttachToContainer": true,
       "GenerateTimedEmit": true

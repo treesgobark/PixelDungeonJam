@@ -27,7 +27,7 @@
  </layer>
  <layer id="1" name="GameplayLayer" width="32" height="32" visible="0" tintcolor="#ffffff">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAACu3XUQ6DIAwA0HKTHWVH4UvZLfblOTgKR1sbQrYQUUrtGhKbNEQxPrRBxAGAM06ruP3bn81fAPwG8AwA8SzxurRc6JONGZnjbY6B44/YJfA9PCS+xKbAWrxHfakt9TehLfWDFFfyqS40x47ml6Yfvm2y8Nfc57H1Fj59V1xuo4XPCUv/dVCjPb8+lvjFbtVI0z+zW34dI36PreX32r3+mu95ud3r0zwv35qSpe/3XKjsnnWdsf6nvf1KvY/hrtMz/H9qjm+G5/+Hb5kf7W2XFAAQAAA=
+   H4sIAAAAAAAACu3X0QnEIAwA0LjJjXKj+NV6W9xX53CUjnYGCT2ktolRQsFAkNbikwZtdQDgjNMqpj/9p/kLgN8A3gEg3mV6bl86+minjML5Vucg8VtsivQeXhpfY2OkWnxbfa2t9TelrfWDFh/kY11wjV2tr5F+ONrdwl9zn0+tt/BxX3G5jRa+JCz9z0WNzvzyWuOTXavRSP/OrvlltPgce5TPtbn+msfsbnN9XOe011BS3/+9ILS5Ps3h7LxSnmOk3+kn/n9Ov79vmT/iA8k5ABAAAA==
   </data>
  </layer>
  <layer id="7" name="ObjectsInFront" width="32" height="32">

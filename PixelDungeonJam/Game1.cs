@@ -60,6 +60,7 @@ namespace PixelDungeonJam
             #endif
         
             GeneratedInitializeEarly();
+            GraphicsDevice.Textures[0] = null;
 
             FlatRedBallServices.InitializeFlatRedBall(this, graphics);
 

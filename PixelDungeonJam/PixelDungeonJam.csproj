@@ -19,6 +19,15 @@
     <None Remove="**\*.glsj" />
     <None Remove="**\*.glej" />
     <None Remove="**\*.gluj" />
+    <None Include="..\builtxnbs\desktopgl\entities\player\takedamage.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>TakeDamage</Name>
+      <Link>content\entities\player\takedamage.xnb</Link>
+    </None>
+    <None Include="content\entities\enemy\topdownvaluesstatic.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>TopDownValuesStatic</Name>
+    </None>
     <None Include="content\entities\orc\orcanimations.achx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>OrcAnimations</Name>
@@ -42,6 +51,10 @@
     <None Include="content\entities\player\knight\run\run-sheet.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>run-sheet</Name>
+    </None>
+    <None Include="content\entities\player\playerpointertex.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>PlayerPointerTex</Name>
     </None>
     <None Include="content\entities\player\topdownvaluesstatic.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -367,8 +380,13 @@
     <Compile Include="Entities\Player.Generated.cs">
       <DependentUpon>Player.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\PlayerPointer.cs" />
+    <Compile Include="Entities\PlayerPointer.Generated.cs">
+      <DependentUpon>PlayerPointer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Factories\OrcFactory.Generated.cs" />
     <Compile Include="Factories\PlayerFactory.Generated.cs" />
+    <Compile Include="Factories\PlayerPointerFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Forms\Screens\GameScreenGumForms.cs" />
     <Compile Include="Forms\Screens\GameScreenGumForms.Generated.cs">

@@ -77,7 +77,8 @@
     {
       "Name": "TopDownValues",
       "CsvFilesUsingThis": [
-        "Entities/Player/TopDownValuesStatic.csv"
+        "Entities/Player/TopDownValuesStatic.csv",
+        "Entities/Enemy/TopDownValuesStatic.csv"
       ],
       "RequiredProperties": [],
       "GenerateCode": true
@@ -99,7 +100,16 @@
   ],
   "EntityReferences": [
     {
+      "Name": "Entities\\Enemy"
+    },
+    {
+      "Name": "Entities\\Orc"
+    },
+    {
       "Name": "Entities\\Player"
+    },
+    {
+      "Name": "Entities\\PlayerPointer"
     }
   ],
   "Bookmarks": [],

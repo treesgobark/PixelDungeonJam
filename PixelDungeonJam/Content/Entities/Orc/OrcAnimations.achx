@@ -6,7 +6,7 @@
   <AnimationChain>
     <Name>IdleRight</Name>
     <Frame>
-      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <TextureName>orc/idle/idle-sheet.png</TextureName>
       <FrameLength>0.25</FrameLength>
       <LeftCoordinate>0</LeftCoordinate>
       <RightCoordinate>32</RightCoordinate>
@@ -22,7 +22,7 @@
       </ShapeCollectionSave>
     </Frame>
     <Frame>
-      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <TextureName>orc/idle/idle-sheet.png</TextureName>
       <FrameLength>0.25</FrameLength>
       <LeftCoordinate>32</LeftCoordinate>
       <RightCoordinate>64</RightCoordinate>
@@ -38,7 +38,7 @@
       </ShapeCollectionSave>
     </Frame>
     <Frame>
-      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <TextureName>orc/idle/idle-sheet.png</TextureName>
       <FrameLength>0.25</FrameLength>
       <LeftCoordinate>64</LeftCoordinate>
       <RightCoordinate>96</RightCoordinate>
@@ -54,7 +54,7 @@
       </ShapeCollectionSave>
     </Frame>
     <Frame>
-      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <TextureName>orc/idle/idle-sheet.png</TextureName>
       <FrameLength>0.25</FrameLength>
       <LeftCoordinate>96</LeftCoordinate>
       <RightCoordinate>128</RightCoordinate>
@@ -74,7 +74,7 @@
     <Name>IdleLeft</Name>
     <Frame>
       <FlipHorizontal>true</FlipHorizontal>
-      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <TextureName>orc/idle/idle-sheet.png</TextureName>
       <FrameLength>0.25</FrameLength>
       <LeftCoordinate>0</LeftCoordinate>
       <RightCoordinate>32</RightCoordinate>
@@ -91,7 +91,7 @@
     </Frame>
     <Frame>
       <FlipHorizontal>true</FlipHorizontal>
-      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <TextureName>orc/idle/idle-sheet.png</TextureName>
       <FrameLength>0.25</FrameLength>
       <LeftCoordinate>32</LeftCoordinate>
       <RightCoordinate>64</RightCoordinate>
@@ -108,7 +108,7 @@
     </Frame>
     <Frame>
       <FlipHorizontal>true</FlipHorizontal>
-      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <TextureName>orc/idle/idle-sheet.png</TextureName>
       <FrameLength>0.25</FrameLength>
       <LeftCoordinate>64</LeftCoordinate>
       <RightCoordinate>96</RightCoordinate>
@@ -125,7 +125,7 @@
     </Frame>
     <Frame>
       <FlipHorizontal>true</FlipHorizontal>
-      <TextureName>knight/idle/idle-sheet.png</TextureName>
+      <TextureName>orc/idle/idle-sheet.png</TextureName>
       <FrameLength>0.25</FrameLength>
       <LeftCoordinate>96</LeftCoordinate>
       <RightCoordinate>128</RightCoordinate>
@@ -144,7 +144,7 @@
   <AnimationChain>
     <Name>RunRight</Name>
     <Frame>
-      <TextureName>knight/run/run-sheet.png</TextureName>
+      <TextureName>orc/run/run-sheet.png</TextureName>
       <FrameLength>0.17</FrameLength>
       <LeftCoordinate>0</LeftCoordinate>
       <RightCoordinate>64</RightCoordinate>
@@ -160,7 +160,7 @@
       </ShapeCollectionSave>
     </Frame>
     <Frame>
-      <TextureName>knight/run/run-sheet.png</TextureName>
+      <TextureName>orc/run/run-sheet.png</TextureName>
       <FrameLength>0.17</FrameLength>
       <LeftCoordinate>64</LeftCoordinate>
       <RightCoordinate>128</RightCoordinate>
@@ -176,7 +176,7 @@
       </ShapeCollectionSave>
     </Frame>
     <Frame>
-      <TextureName>knight/run/run-sheet.png</TextureName>
+      <TextureName>orc/run/run-sheet.png</TextureName>
       <FrameLength>0.17</FrameLength>
       <LeftCoordinate>128</LeftCoordinate>
       <RightCoordinate>192</RightCoordinate>
@@ -192,7 +192,7 @@
       </ShapeCollectionSave>
     </Frame>
     <Frame>
-      <TextureName>knight/run/run-sheet.png</TextureName>
+      <TextureName>orc/run/run-sheet.png</TextureName>
       <FrameLength>0.17</FrameLength>
       <LeftCoordinate>192</LeftCoordinate>
       <RightCoordinate>256</RightCoordinate>
@@ -208,7 +208,7 @@
       </ShapeCollectionSave>
     </Frame>
     <Frame>
-      <TextureName>knight/run/run-sheet.png</TextureName>
+      <TextureName>orc/run/run-sheet.png</TextureName>
       <FrameLength>0.17</FrameLength>
       <LeftCoordinate>256</LeftCoordinate>
       <RightCoordinate>320</RightCoordinate>
@@ -224,112 +224,7 @@
       </ShapeCollectionSave>
     </Frame>
     <Frame>
-      <TextureName>knight/run/run-sheet.png</TextureName>
-      <FrameLength>0.17</FrameLength>
-      <LeftCoordinate>320</LeftCoordinate>
-      <RightCoordinate>384</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>64</BottomCoordinate>
-      <RelativeY>32</RelativeY>
-      <ShapeCollectionSave>
-        <AxisAlignedRectangleSaves />
-        <AxisAlignedCubeSaves />
-        <PolygonSaves />
-        <CircleSaves />
-        <SphereSaves />
-      </ShapeCollectionSave>
-    </Frame>
-  </AnimationChain>
-  <AnimationChain>
-    <Name>RunLeft</Name>
-    <Frame>
-      <FlipHorizontal>true</FlipHorizontal>
-      <TextureName>knight/run/run-sheet.png</TextureName>
-      <FrameLength>0.17</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>64</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>64</BottomCoordinate>
-      <RelativeY>32</RelativeY>
-      <ShapeCollectionSave>
-        <AxisAlignedRectangleSaves />
-        <AxisAlignedCubeSaves />
-        <PolygonSaves />
-        <CircleSaves />
-        <SphereSaves />
-      </ShapeCollectionSave>
-    </Frame>
-    <Frame>
-      <FlipHorizontal>true</FlipHorizontal>
-      <TextureName>knight/run/run-sheet.png</TextureName>
-      <FrameLength>0.17</FrameLength>
-      <LeftCoordinate>64</LeftCoordinate>
-      <RightCoordinate>128</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>64</BottomCoordinate>
-      <RelativeY>32</RelativeY>
-      <ShapeCollectionSave>
-        <AxisAlignedRectangleSaves />
-        <AxisAlignedCubeSaves />
-        <PolygonSaves />
-        <CircleSaves />
-        <SphereSaves />
-      </ShapeCollectionSave>
-    </Frame>
-    <Frame>
-      <FlipHorizontal>true</FlipHorizontal>
-      <TextureName>knight/run/run-sheet.png</TextureName>
-      <FrameLength>0.17</FrameLength>
-      <LeftCoordinate>128</LeftCoordinate>
-      <RightCoordinate>192</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>64</BottomCoordinate>
-      <RelativeY>32</RelativeY>
-      <ShapeCollectionSave>
-        <AxisAlignedRectangleSaves />
-        <AxisAlignedCubeSaves />
-        <PolygonSaves />
-        <CircleSaves />
-        <SphereSaves />
-      </ShapeCollectionSave>
-    </Frame>
-    <Frame>
-      <FlipHorizontal>true</FlipHorizontal>
-      <TextureName>knight/run/run-sheet.png</TextureName>
-      <FrameLength>0.17</FrameLength>
-      <LeftCoordinate>192</LeftCoordinate>
-      <RightCoordinate>256</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>64</BottomCoordinate>
-      <RelativeY>32</RelativeY>
-      <ShapeCollectionSave>
-        <AxisAlignedRectangleSaves />
-        <AxisAlignedCubeSaves />
-        <PolygonSaves />
-        <CircleSaves />
-        <SphereSaves />
-      </ShapeCollectionSave>
-    </Frame>
-    <Frame>
-      <FlipHorizontal>true</FlipHorizontal>
-      <TextureName>knight/run/run-sheet.png</TextureName>
-      <FrameLength>0.17</FrameLength>
-      <LeftCoordinate>256</LeftCoordinate>
-      <RightCoordinate>320</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>64</BottomCoordinate>
-      <RelativeY>32</RelativeY>
-      <ShapeCollectionSave>
-        <AxisAlignedRectangleSaves />
-        <AxisAlignedCubeSaves />
-        <PolygonSaves />
-        <CircleSaves />
-        <SphereSaves />
-      </ShapeCollectionSave>
-    </Frame>
-    <Frame>
-      <FlipHorizontal>true</FlipHorizontal>
-      <TextureName>knight/run/run-sheet.png</TextureName>
+      <TextureName>orc/run/run-sheet.png</TextureName>
       <FrameLength>0.17</FrameLength>
       <LeftCoordinate>320</LeftCoordinate>
       <RightCoordinate>384</RightCoordinate>
