@@ -19,6 +19,18 @@
     <None Remove="**\*.glsj" />
     <None Remove="**\*.glej" />
     <None Remove="**\*.gluj" />
+    <None Include="content\entities\orc\orcanimations.achx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>OrcAnimations</Name>
+    </None>
+    <None Include="content\entities\orc\orc\idle\idle-sheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>idle-sheet</Name>
+    </None>
+    <None Include="content\entities\orc\orc\run\run-sheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>run-sheet</Name>
+    </None>
     <None Include="content\entities\player\knight.achx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>Knight</Name>
@@ -343,10 +355,19 @@
   <ItemGroup>
     <Compile Include="DataTypes\TileMapInfo.Generated.cs" />
     <Compile Include="DataTypes\TopDownValues.Generated.cs" />
+    <Compile Include="Entities\Enemy.cs" />
+    <Compile Include="Entities\Enemy.Generated.cs">
+      <DependentUpon>Enemy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Orc.cs" />
+    <Compile Include="Entities\Orc.Generated.cs">
+      <DependentUpon>Orc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Player.cs" />
     <Compile Include="Entities\Player.Generated.cs">
       <DependentUpon>Player.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factories\OrcFactory.Generated.cs" />
     <Compile Include="Factories\PlayerFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Forms\Screens\GameScreenGumForms.cs" />
@@ -657,20 +678,11 @@
       <Version>12.0.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="FlatRedBall.Forms.DesktopGlNet6">
-      <HintPath>Libraries\DesktopGl\Debug\FlatRedBall.Forms.DesktopGlNet6.dll</HintPath>
-    </Reference>
-    <Reference Include="FlatRedBallDesktopGLNet6">
-      <HintPath>Libraries\DesktopGl\Debug\FlatRedBallDesktopGLNet6.dll</HintPath>
-    </Reference>
-    <Reference Include="GumCore.DesktopGlNet6">
-      <HintPath>Libraries\DesktopGl\Debug\GumCore.DesktopGlNet6.dll</HintPath>
-    </Reference>
-    <Reference Include="StateInterpolation.DesktopNet6">
-      <HintPath>Libraries\DesktopGl\Debug\StateInterpolation.DesktopNet6.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+  <!--  <ItemGroup>-->
+  <!--    <Reference Include="GumCore.DesktopGlNet6">-->
+  <!--      <HintPath>Libraries\DesktopGl\Debug\GumCore.DesktopGlNet6.dll</HintPath>-->
+  <!--    </Reference>-->
+  <!--  </ItemGroup>-->
   <ItemGroup>
     <None Update="Content\Shader.fx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -684,6 +696,23 @@
     <None Update="Content\ShaderForcePoint.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../../../source/repos/FlatRedBall/Engines/FlatRedBallXNA/FlatRedBallDesktopGLNet6/FlatRedBallDesktopGLNet6.csproj">
+      <Name>FlatRedBallDesktopGLNet6</Name>
+    </ProjectReference>
+    <ProjectReference Include="../../../../source/repos/FlatRedBall/Engines/Forms/FlatRedBall.Forms/FlatRedBall.Forms.DesktopGlNet6/FlatRedBall.Forms.DesktopGlNet6.csproj">
+      <Name>FlatRedBall.Forms.DesktopGlNet6</Name>
+    </ProjectReference>
+    <ProjectReference Include="../../../../source/repos/FlatRedBall/Engines/Forms/FlatRedBall.Forms/StateInterpolation/StateInterpolation.DesktopGlNet6/StateInterpolation.DesktopNet6.csproj">
+      <Name>StateInterpolation.DesktopNet6</Name>
+    </ProjectReference>
+    <ProjectReference Include="../../../../source/repos/Gum/GumCore/GumCoreXnaPc/GumCore.DesktopGlNet6/GumCore.DesktopGlNet6.csproj">
+      <Name>GumCore.DesktopGlNet6</Name>
+    </ProjectReference>
+    <ProjectReference Include="../../../../source/repos/Gum/SvgPlugin/SkiaInGumShared/SkiaInGum.csproj">
+      <Name>SkiaInGum</Name>
+    </ProjectReference>
   </ItemGroup>
   <!--  <ItemGroup>-->
   <!--    <ProjectReference Include="..\..\..\..\source\repos\ANLG.Utilities\ANLG.Utilities.FlatRedBall\ANLG.Utilities.FlatRedBall.csproj" />-->

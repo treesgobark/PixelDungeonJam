@@ -5,6 +5,24 @@ VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixelDungeonJam", "PixelDungeonJam\PixelDungeonJam.csproj", "{D7079294-70C6-4204-B29E-C505EC181815}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateInterpolation.DesktopNet6", "..\..\..\source\repos\FlatRedBall\Engines\Forms\FlatRedBall.Forms\StateInterpolation\StateInterpolation.DesktopGlNet6\StateInterpolation.DesktopNet6.csproj", "{3A389A14-9750-4B65-8C56-7F7559B42F48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlatRedBallDesktopGLNet6", "..\..\..\source\repos\FlatRedBall\Engines\FlatRedBallXNA\FlatRedBallDesktopGLNet6\FlatRedBallDesktopGLNet6.csproj", "{FB09C178-8F22-4555-97E3-340A9E9611CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlatRedBall.Forms.DesktopGlNet6", "..\..\..\source\repos\FlatRedBall\Engines\Forms\FlatRedBall.Forms\FlatRedBall.Forms.DesktopGlNet6\FlatRedBall.Forms.DesktopGlNet6.csproj", "{3DD15B5F-1E1A-4251-8437-48E1D1B010CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GumCore.DesktopGlNet6", "..\..\..\source\repos\Gum\GumCore\GumCoreXnaPc\GumCore.DesktopGlNet6\GumCore.DesktopGlNet6.csproj", "{20B042D9-EEF5-435E-90CB-D9A54D181781}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FlatRedBallShared", "..\..\..\source\repos\FlatRedBall\Engines\FlatRedBallXNA\FlatRedBall\FlatRedBallShared.shproj", "{0BB8CBE3-8503-46C1-9272-D98E153A230E}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FlatRedBall.Forms.Shared", "..\..\..\source\repos\FlatRedBall\Engines\Forms\FlatRedBall.Forms\FlatRedBall.Forms.Shared\FlatRedBall.Forms.Shared.shproj", "{728151F0-03E0-4253-94FE-46B9C77EDEA6}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GumCoreShared", "..\..\..\source\repos\Gum\GumCoreShared.shproj", "{F919C045-EAC7-4806-9A1F-CE421F923E97}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GumCoreShared.FlatRedBall", "..\..\..\source\repos\FlatRedBall\FRBDK\Glue\GumPlugin\GumPlugin\GumCoreShared.FlatRedBall.shproj", "{0EE8A96C-A754-453D-9E65-19A24E9A5E76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaInGum", "..\..\..\source\repos\Gum\SvgPlugin\SkiaInGumShared\SkiaInGum.csproj", "{6DE13B61-0306-4039-8DB8-FF3BCA063540}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +33,26 @@ Global
 		{D7079294-70C6-4204-B29E-C505EC181815}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7079294-70C6-4204-B29E-C505EC181815}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7079294-70C6-4204-B29E-C505EC181815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A389A14-9750-4B65-8C56-7F7559B42F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A389A14-9750-4B65-8C56-7F7559B42F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A389A14-9750-4B65-8C56-7F7559B42F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A389A14-9750-4B65-8C56-7F7559B42F48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB09C178-8F22-4555-97E3-340A9E9611CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB09C178-8F22-4555-97E3-340A9E9611CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB09C178-8F22-4555-97E3-340A9E9611CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB09C178-8F22-4555-97E3-340A9E9611CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD15B5F-1E1A-4251-8437-48E1D1B010CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD15B5F-1E1A-4251-8437-48E1D1B010CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD15B5F-1E1A-4251-8437-48E1D1B010CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD15B5F-1E1A-4251-8437-48E1D1B010CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B042D9-EEF5-435E-90CB-D9A54D181781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B042D9-EEF5-435E-90CB-D9A54D181781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B042D9-EEF5-435E-90CB-D9A54D181781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B042D9-EEF5-435E-90CB-D9A54D181781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DE13B61-0306-4039-8DB8-FF3BCA063540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE13B61-0306-4039-8DB8-FF3BCA063540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE13B61-0306-4039-8DB8-FF3BCA063540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE13B61-0306-4039-8DB8-FF3BCA063540}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
