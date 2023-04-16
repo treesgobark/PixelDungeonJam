@@ -103,6 +103,9 @@
       "Name": "Entities\\Enemy"
     },
     {
+      "Name": "Entities\\Hitbox"
+    },
+    {
       "Name": "Entities\\Orc"
     },
     {
@@ -110,6 +113,9 @@
     },
     {
       "Name": "Entities\\PlayerPointer"
+    },
+    {
+      "Name": "Entities\\Slash"
     }
   ],
   "Bookmarks": [],

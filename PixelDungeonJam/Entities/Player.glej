@@ -31,6 +31,14 @@
       "IsSharedStatic": true,
       "RuntimeType": "Microsoft.Xna.Framework.Audio.SoundEffect",
       "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "Entities/Player/WeaponData.csv",
+      "IsSharedStatic": true,
+      "CreatesDictionary": true,
+      "SourceFile": "Entities/Player/WeaponData.ods",
+      "BuildTool": "*.ods -> soffice.exe -> *.csv",
+      "ProjectsToExcludeFrom": []
     }
   ],
   "CustomVariables": [
@@ -82,18 +90,6 @@
       ],
       "Name": "MaxHealth",
       "DefaultValue": 100.0,
-      "SetByDerived": true
-    },
-    {
-      "Properties": [
-        {
-          "Name": "Type",
-          "Value": "float",
-          "Type": "String"
-        }
-      ],
-      "Name": "InvulnTime",
-      "DefaultValue": 0.2,
       "SetByDerived": true
     },
     {
@@ -166,9 +162,33 @@
           "Time": 0.0
         },
         {
+          "Type": "float",
+          "Member": "Blue",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "FlatRedBall.Graphics.ColorOperation",
+          "Member": "ColorOperation",
+          "Value": 3,
+          "Time": 0.0
+        },
+        {
           "Type": "string",
           "Member": "CurrentChainName",
           "Value": "IdleRight",
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Green",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Red",
+          "Value": 1.0,
           "Time": 0.0
         },
         {
@@ -180,30 +200,6 @@
         {
           "Type": "float",
           "Member": "TextureScale",
-          "Value": 1.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "float",
-          "Member": "Red",
-          "Value": 1.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "FlatRedBall.Graphics.ColorOperation",
-          "Member": "ColorOperation",
-          "Value": 3,
-          "Time": 0.0
-        },
-        {
-          "Type": "float",
-          "Member": "Green",
-          "Value": 1.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "float",
-          "Member": "Blue",
           "Value": 1.0,
           "Time": 0.0
         },
@@ -295,6 +291,12 @@
           "Time": 0.0
         },
         {
+          "Type": "bool",
+          "Member": "Visible",
+          "Value": false,
+          "Time": 0.0
+        },
+        {
           "Type": "float",
           "Member": "Width",
           "Value": 16.0,
@@ -310,12 +312,6 @@
           "Type": "float",
           "Member": "Y",
           "Value": 16.0,
-          "Time": 0.0
-        },
-        {
-          "Type": "bool",
-          "Member": "Visible",
-          "Value": false,
           "Time": 0.0
         }
       ],

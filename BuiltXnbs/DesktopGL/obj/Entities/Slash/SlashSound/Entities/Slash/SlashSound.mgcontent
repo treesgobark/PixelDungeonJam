@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/Logan/Documents/FlatRedBallProjects/PixelDungeonJam/PixelDungeonJam/Content/Entities/Slash/SlashSound.wav</SourceFile>
+  <SourceTime>2023-04-13T18:25:25.9898998-04:00</SourceTime>
+  <DestFile>C:/Users/Logan/Documents/FlatRedBallProjects/PixelDungeonJam/BuiltXnbs/DesktopGL/Entities/Slash/SlashSound.xnb</DestFile>
+  <DestTime>2023-04-16T12:21:43.180634-04:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2022-07-26T07:44:56-04:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

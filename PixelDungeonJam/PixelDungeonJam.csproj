@@ -24,6 +24,11 @@
       <Name>TakeDamage</Name>
       <Link>content\entities\player\takedamage.xnb</Link>
     </None>
+    <None Include="..\builtxnbs\desktopgl\entities\slash\slashsound.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>SlashSound</Name>
+      <Link>content\entities\slash\slashsound.xnb</Link>
+    </None>
     <None Include="content\entities\enemy\topdownvaluesstatic.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>TopDownValuesStatic</Name>
@@ -59,6 +64,18 @@
     <None Include="content\entities\player\topdownvaluesstatic.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>TopDownValuesStatic</Name>
+    </None>
+    <None Include="content\entities\player\weapondata.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>WeaponData</Name>
+    </None>
+    <None Include="content\entities\slash\slash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slash</Name>
+    </None>
+    <None Include="content\entities\slash\slashchains.achx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>SlashChains</Name>
     </None>
     <None Include="content\gumproject\components\controls\buttonclose.gucx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -368,9 +385,14 @@
   <ItemGroup>
     <Compile Include="DataTypes\TileMapInfo.Generated.cs" />
     <Compile Include="DataTypes\TopDownValues.Generated.cs" />
+    <Compile Include="DataTypes\WeaponData.Generated.cs" />
     <Compile Include="Entities\Enemy.cs" />
     <Compile Include="Entities\Enemy.Generated.cs">
       <DependentUpon>Enemy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Hitbox.cs" />
+    <Compile Include="Entities\Hitbox.Generated.cs">
+      <DependentUpon>Hitbox.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\Orc.cs" />
     <Compile Include="Entities\Orc.Generated.cs">
@@ -384,9 +406,14 @@
     <Compile Include="Entities\PlayerPointer.Generated.cs">
       <DependentUpon>PlayerPointer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Slash.cs" />
+    <Compile Include="Entities\Slash.Generated.cs">
+      <DependentUpon>Slash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Factories\OrcFactory.Generated.cs" />
     <Compile Include="Factories\PlayerFactory.Generated.cs" />
     <Compile Include="Factories\PlayerPointerFactory.Generated.cs" />
+    <Compile Include="Factories\SlashFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Forms\Screens\GameScreenGumForms.cs" />
     <Compile Include="Forms\Screens\GameScreenGumForms.Generated.cs">

@@ -3,14 +3,27 @@
     "GLUE"
   ],
   "Source": "GLUE",
-  "BaseEntity": "Entities\\Enemy",
+  "BaseEntity": "Entities\\Hitbox",
   "CreatedByOtherEntities": true,
   "Is2D": true,
   "ReferencedFiles": [
     {
-      "Name": "Entities/Orc/OrcAnimations.achx",
+      "Name": "Entities/Slash/SlashChains.achx",
       "IsSharedStatic": true,
       "RuntimeType": "FlatRedBall.Graphics.Animation.AnimationChainList",
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "Entities/Slash/SlashSound.wav",
+      "Properties": [
+        {
+          "Name": "UseContentPipeline",
+          "Value": true,
+          "Type": "Boolean"
+        }
+      ],
+      "IsSharedStatic": true,
+      "RuntimeType": "Microsoft.Xna.Framework.Audio.SoundEffect",
       "ProjectsToExcludeFrom": []
     }
   ],
@@ -29,25 +42,7 @@
         }
       ],
       "Name": "TeamIndex",
-      "DefaultValue": 1,
-      "SetByDerived": true,
-      "DefinedByBase": true
-    },
-    {
-      "Properties": [
-        {
-          "Name": "Type",
-          "Value": "decimal",
-          "Type": "String"
-        },
-        {
-          "Name": "CreatesProperties",
-          "Value": true,
-          "Type": "Boolean"
-        }
-      ],
-      "Name": "MaxHealth",
-      "DefaultValue": 100.0,
+      "DefaultValue": 2,
       "SetByDerived": true,
       "DefinedByBase": true
     },
@@ -65,7 +60,7 @@
         }
       ],
       "Name": "SecondsBetweenDamage",
-      "DefaultValue": 0.2,
+      "DefaultValue": 0.5,
       "SetByDerived": true,
       "DefinedByBase": true
     },
@@ -112,32 +107,38 @@
       ],
       "InstructionSaves": [
         {
+          "Type": "float",
+          "Member": "TextureScale",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
           "Type": "FlatRedBall.Graphics.Animation.AnimationChainList",
           "Member": "AnimationChains",
-          "Value": "OrcAnimations",
+          "Value": "SlashChains",
           "Time": 0.0
         },
         {
           "Type": "string",
           "Member": "CurrentChainName",
-          "Value": "IdleRight",
+          "Value": "SlashRight",
           "Time": 0.0
         },
         {
           "Type": "float",
-          "Member": "TextureScale",
-          "Value": 1.0,
+          "Member": "AnimationSpeed",
+          "Value": 5.0,
           "Time": 0.0
         }
       ],
       "SourceType": 2,
       "SourceFile": "Sprite",
+      "HasPublicProperty": true,
       "AttachToContainer": true,
-      "GenerateTimedEmit": true,
-      "DefinedByBase": true
+      "GenerateTimedEmit": true
     },
     {
-      "InstanceName": "SolidBounds",
+      "InstanceName": "CircleInstance",
       "SourceClassType": "FlatRedBall.Math.Geometry.Circle",
       "Properties": [
         {
@@ -155,13 +156,13 @@
         {
           "Type": "float",
           "Member": "Radius",
-          "Value": 8.0,
+          "Value": 15.38315,
           "Time": 0.0
         },
         {
-          "Type": "bool",
-          "Member": "Visible",
-          "Value": false,
+          "Type": "float",
+          "Member": "X",
+          "Value": 0.0,
           "Time": 0.0
         }
       ],
@@ -173,6 +174,6 @@
       "DefinedByBase": true
     }
   ],
-  "Name": "Entities\\Orc",
+  "Name": "Entities\\Slash",
   "CustomClassesForExport": []
 }

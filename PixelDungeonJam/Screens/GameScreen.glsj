@@ -155,6 +155,45 @@
       "GenerateTimedEmit": true
     },
     {
+      "InstanceName": "HitboxList",
+      "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "SourceType",
+          "Value": 2,
+          "Type": "SourceType"
+        },
+        {
+          "Name": "SortAxis",
+          "Value": 0
+        },
+        {
+          "Name": "PartitioningAutomaticManual",
+          "Value": 0
+        },
+        {
+          "Name": "PartitionWidthHeight",
+          "Value": 32.0
+        },
+        {
+          "Name": "IsSortListEveryFrameChecked",
+          "Value": true
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "PositionedObjectList (Generic)",
+      "SourceClassGenericType": "Entities\\Hitbox",
+      "ExposedInDerived": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
       "InstanceName": "Map",
       "SourceClassType": "FlatRedBall.TileGraphics.LayeredTileMap",
       "Properties": [
@@ -604,6 +643,172 @@
       ],
       "SourceType": 2,
       "SourceFile": "FlatRedBall.Entities.CameraControllingEntity",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "HitboxVsPlayer",
+      "SourceClassType": "FlatRedBall.Math.Collision.ListVsListRelationship<Entities.Hitbox, Entities.Player>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "SourceType",
+          "Value": 2,
+          "Type": "SourceType"
+        },
+        {
+          "Name": "IsAutoNameEnabled",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "FirstCollisionName",
+          "Value": "HitboxList",
+          "Type": "String"
+        },
+        {
+          "Name": "SecondCollisionName",
+          "Value": "PlayerList",
+          "Type": "String"
+        },
+        {
+          "Name": "FirstSubCollisionSelectedItem",
+          "Value": "<Entire Object>"
+        },
+        {
+          "Name": "SecondSubCollisionSelectedItem",
+          "Value": "<Entire Object>"
+        },
+        {
+          "Name": "IsCollisionActive",
+          "Value": true
+        },
+        {
+          "Name": "IsAutomaticallyApplyPhysicsChecked",
+          "Value": true
+        },
+        {
+          "Name": "FirstCollisionMass",
+          "Value": 1.0
+        },
+        {
+          "Name": "SecondCollisionMass",
+          "Value": 1.0
+        },
+        {
+          "Name": "SoftCollisionCoefficient",
+          "Value": 1.0
+        },
+        {
+          "Name": "CollisionElasticity",
+          "Value": 1.0
+        },
+        {
+          "Name": "IsDealDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroyFirstOnDamageChecked",
+          "Value": false,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroySecondOnDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "FlatRedBall.Math.Collision.ListVsListRelationship<Entities.Hitbox, Entities.Player>",
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "HitboxVsEnemy",
+      "SourceClassType": "FlatRedBall.Math.Collision.ListVsListRelationship<Entities.Hitbox, Entities.Enemy>",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "SourceType",
+          "Value": 2,
+          "Type": "SourceType"
+        },
+        {
+          "Name": "IsAutoNameEnabled",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "FirstCollisionName",
+          "Value": "HitboxList",
+          "Type": "String"
+        },
+        {
+          "Name": "SecondCollisionName",
+          "Value": "EnemyList",
+          "Type": "String"
+        },
+        {
+          "Name": "IsCollisionActive",
+          "Value": true
+        },
+        {
+          "Name": "IsAutomaticallyApplyPhysicsChecked",
+          "Value": true
+        },
+        {
+          "Name": "FirstCollisionMass",
+          "Value": 1.0
+        },
+        {
+          "Name": "SecondCollisionMass",
+          "Value": 1.0
+        },
+        {
+          "Name": "SoftCollisionCoefficient",
+          "Value": 1.0
+        },
+        {
+          "Name": "CollisionElasticity",
+          "Value": 1.0
+        },
+        {
+          "Name": "FirstSubCollisionSelectedItem",
+          "Value": "<Entire Object>"
+        },
+        {
+          "Name": "SecondSubCollisionSelectedItem",
+          "Value": "<Entire Object>"
+        },
+        {
+          "Name": "IsDealDamageChecked",
+          "Value": true,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroyFirstOnDamageChecked",
+          "Value": false,
+          "Type": "Object"
+        },
+        {
+          "Name": "IsDestroySecondOnDamageChecked",
+          "Value": false,
+          "Type": "Object"
+        }
+      ],
+      "InstructionSaves": [],
+      "SourceType": 2,
+      "SourceFile": "FlatRedBall.Math.Collision.ListVsListRelationship<Entities.Hitbox, Entities.Enemy>",
       "AttachToContainer": true,
       "GenerateTimedEmit": true
     }

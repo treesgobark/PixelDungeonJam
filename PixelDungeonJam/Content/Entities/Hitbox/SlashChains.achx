@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AnimationChainArraySave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FileRelativeTextures>true</FileRelativeTextures>
+  <TimeMeasurementUnit>Undefined</TimeMeasurementUnit>
+  <CoordinateType>Pixel</CoordinateType>
+  <AnimationChain>
+    <Name>SlashRight</Name>
+    <Frame>
+      <TextureName>Slash.png</TextureName>
+      <FrameLength>0.25</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>0.25</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>1</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>slash.png</TextureName>
+      <FrameLength>0.25</FrameLength>
+      <LeftCoordinate>0.25</LeftCoordinate>
+      <RightCoordinate>0.5</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>1</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>slash.png</TextureName>
+      <FrameLength>0.25</FrameLength>
+      <LeftCoordinate>0.5</LeftCoordinate>
+      <RightCoordinate>0.75</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>1</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>slash.png</TextureName>
+      <FrameLength>0.25</FrameLength>
+      <LeftCoordinate>0.75</LeftCoordinate>
+      <RightCoordinate>1</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>1</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>SlashLeft</Name>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>Slash.png</TextureName>
+      <FrameLength>0.25</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>0.25</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>1</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>slash.png</TextureName>
+      <FrameLength>0.25</FrameLength>
+      <LeftCoordinate>0.25</LeftCoordinate>
+      <RightCoordinate>0.5</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>1</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>slash.png</TextureName>
+      <FrameLength>0.25</FrameLength>
+      <LeftCoordinate>0.5</LeftCoordinate>
+      <RightCoordinate>0.75</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>1</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>slash.png</TextureName>
+      <FrameLength>0.25</FrameLength>
+      <LeftCoordinate>0.75</LeftCoordinate>
+      <RightCoordinate>1</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>1</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <ProjectFile>../../../pixeldungeonjam.gluj</ProjectFile>
+</AnimationChainArraySave>

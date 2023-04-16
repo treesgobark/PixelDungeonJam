@@ -1,0 +1,2 @@
+"Name (string, required)",Damage (decimal),Range (float),Size (float),Attack Speed (float),Attack Duration (float),Velocity Scaling (float)
+Sword1,15,15,1,2,0.15,1.15
