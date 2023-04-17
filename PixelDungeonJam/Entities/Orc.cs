@@ -9,11 +9,14 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 
 namespace PixelDungeonJam.Entities
 {
     public partial class Orc
     {
+        protected override SoundEffect TakeDamage => OrcHit;
+
         /// <summary>
         /// Initialization logic which is executed only one time for this Entity (unless the Entity is pooled).
         /// This method is called when the Entity is added to managers. Entities which are instantiated but not

@@ -61,6 +61,7 @@ namespace PixelDungeonJam
         
             GeneratedInitializeEarly();
             GraphicsDevice.Textures[0] = null;
+            SpriteManager.OrderedSortType = SortType.ZSecondaryParentY;
 
             FlatRedBallServices.InitializeFlatRedBall(this, graphics);
 

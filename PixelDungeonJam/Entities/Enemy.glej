@@ -114,6 +114,18 @@
       "Name": "DamageToDeal",
       "DefaultValue": 10.0,
       "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "FlashStrength",
+      "DefaultValue": 0.5,
+      "SetByDerived": true
     }
   ],
   "Properties": [
@@ -164,6 +176,30 @@
           "Member": "TextureScale",
           "Value": 1.0,
           "Time": 0.0
+        },
+        {
+          "Type": "FlatRedBall.Graphics.ColorOperation",
+          "Member": "ColorOperation",
+          "Value": 3,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Red",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Green",
+          "Value": 1.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Blue",
+          "Value": 1.0,
+          "Time": 0.0
         }
       ],
       "SourceType": 2,
@@ -197,6 +233,42 @@
       ],
       "SourceType": 2,
       "SourceFile": "Circle",
+      "HasPublicProperty": true,
+      "SetByDerived": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true
+    },
+    {
+      "InstanceName": "Hitbox",
+      "SourceClassType": "FlatRedBall.Math.Geometry.AxisAlignedRectangle",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "SourceType",
+          "Value": 2,
+          "Type": "SourceType"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Width",
+          "Value": 32.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Height",
+          "Value": 32.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "AxisAlignedRectangle",
       "HasPublicProperty": true,
       "SetByDerived": true,
       "AttachToContainer": true,

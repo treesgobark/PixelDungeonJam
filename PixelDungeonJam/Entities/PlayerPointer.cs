@@ -15,6 +15,8 @@ namespace PixelDungeonJam.Entities
 {
     public partial class PlayerPointer
     {
+        public Vector2 NormalizedDirection => Vector2.UnitX.AtAngle(Angle);
+        
         /// <summary>
         /// Initialization logic which is executed only one time for this Entity (unless the Entity is pooled).
         /// This method is called when the Entity is added to managers. Entities which are instantiated but not

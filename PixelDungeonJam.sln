@@ -23,6 +23,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GumCoreShared.FlatRedBall",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaInGum", "..\..\..\source\repos\Gum\SvgPlugin\SkiaInGumShared\SkiaInGum.csproj", "{6DE13B61-0306-4039-8DB8-FF3BCA063540}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANLG.Utilities.FlatRedBall", "..\..\..\source\repos\ANLG.Utilities\ANLG.Utilities.FlatRedBall\ANLG.Utilities.FlatRedBall.csproj", "{4BA1872B-5B0F-408F-B492-2EF35FE7813E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,8 @@ Global
 		{6DE13B61-0306-4039-8DB8-FF3BCA063540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DE13B61-0306-4039-8DB8-FF3BCA063540}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DE13B61-0306-4039-8DB8-FF3BCA063540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BA1872B-5B0F-408F-B492-2EF35FE7813E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA1872B-5B0F-408F-B492-2EF35FE7813E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

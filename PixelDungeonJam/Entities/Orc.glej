@@ -12,6 +12,19 @@
       "IsSharedStatic": true,
       "RuntimeType": "FlatRedBall.Graphics.Animation.AnimationChainList",
       "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "Entities/Orc/OrcHit.wav",
+      "Properties": [
+        {
+          "Name": "UseContentPipeline",
+          "Value": true,
+          "Type": "Boolean"
+        }
+      ],
+      "IsSharedStatic": true,
+      "RuntimeType": "Microsoft.Xna.Framework.Audio.SoundEffect",
+      "ProjectsToExcludeFrom": []
     }
   ],
   "CustomVariables": [
@@ -167,6 +180,48 @@
       ],
       "SourceType": 2,
       "SourceFile": "Circle",
+      "HasPublicProperty": true,
+      "AttachToContainer": true,
+      "GenerateTimedEmit": true,
+      "DefinedByBase": true
+    },
+    {
+      "InstanceName": "Hitbox",
+      "SourceClassType": "FlatRedBall.Math.Geometry.AxisAlignedRectangle",
+      "Properties": [
+        {
+          "Name": "AssociateWithFactory",
+          "Value": true,
+          "Type": "Boolean"
+        },
+        {
+          "Name": "SourceType",
+          "Value": 2,
+          "Type": "SourceType"
+        }
+      ],
+      "InstructionSaves": [
+        {
+          "Type": "float",
+          "Member": "Width",
+          "Value": 12.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Height",
+          "Value": 24.0,
+          "Time": 0.0
+        },
+        {
+          "Type": "float",
+          "Member": "Y",
+          "Value": 14.0,
+          "Time": 0.0
+        }
+      ],
+      "SourceType": 2,
+      "SourceFile": "AxisAlignedRectangle",
       "HasPublicProperty": true,
       "AttachToContainer": true,
       "GenerateTimedEmit": true,

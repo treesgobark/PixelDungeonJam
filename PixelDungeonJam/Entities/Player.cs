@@ -1,3 +1,4 @@
+using ANLG.Utilities.FlatRedBall.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -61,14 +62,27 @@ namespace PixelDungeonJam.Entities
         {
             switch (InputDevice)
             {
-                case { DefaultSecondaryActionInput.WasJustPressed: true }:
+                case { DefaultSecondaryActionInput.IsDown: true }:
                 {
                     if (!CanAttack) { break; }
 
                     var slash = SlashFactory.CreateNew();
                     slash.TeamIndex = 0;
-                    slash.Position = Position.AddY(SpriteOffsetY) + Vector2.One.AtAngle(_pointer.Angle).AtLength(_currentWeapon.Range).ToVector3();
-                    slash.Velocity = _currentWeapon.VelocityScaling * Velocity;
+                    
+                    slash.Position = Position.AddY(SpriteOffsetY)
+                                             .Add(Vector2.UnitX.AtAngle(_pointer.Angle)
+                                                             .AtLength(_currentWeapon.Range));
+                    
+                    float dot = Vector2.Dot(Velocity.XY(), _pointer.NormalizedDirection);
+                    if (dot > 0)
+                    {
+                        slash.Velocity = _currentWeapon.VelocityScaling * Velocity.XY().ProjectOnto(_pointer.NormalizedDirection).ToVec3(Velocity.Z);
+                    }
+                    // if (dot < 0)
+                    // {
+                    //     slash.Velocity *= -1;
+                    // }
+                    
                     slash.RotationZ = _pointer.Angle;
                     slash.SpriteInstance.AnimationSpeed = 1 / _currentWeapon.AttackDuration;
                     slash.SpriteInstance.TextureScale *= _currentWeapon.Size;
@@ -90,10 +104,10 @@ namespace PixelDungeonJam.Entities
             
             SpriteInstance.CurrentChainName = (MovementInput, _lastDirection) switch
             {
-                ({ X: > 0 }, _) => "RunRight",
-                ({ X: < 0 }, _) => "RunLeft",
-                (_, SpriteDirection.Right) => "IdleRight",
-                (_, SpriteDirection.Left) => "IdleLeft",
+                ({ X: 0, Y: 0 }, SpriteDirection.Right) => "IdleRight",
+                ({ X: 0, Y: 0 }, SpriteDirection.Left) => "IdleLeft",
+                (_, SpriteDirection.Right) => "RunRight",
+                (_, SpriteDirection.Left) => "RunLeft",
                 _ => throw new UnreachableException((MovementInput, _lastDirection).ToString()),
             };
         }

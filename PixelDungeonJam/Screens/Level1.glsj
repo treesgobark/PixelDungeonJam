@@ -271,67 +271,6 @@
           "GenerateTimedEmit": true
         }
       ]
-    },
-    {
-      "InstanceName": "HitboxList",
-      "SourceClassType": "FlatRedBall.Math.PositionedObjectList<T>",
-      "Properties": [
-        {
-          "Name": "AssociateWithFactory",
-          "Value": true,
-          "Type": "Boolean"
-        },
-        {
-          "Name": "SourceType",
-          "Value": 2,
-          "Type": "SourceType"
-        }
-      ],
-      "InstructionSaves": [],
-      "SourceType": 2,
-      "SourceFile": "PositionedObjectList (Generic)",
-      "SourceClassGenericType": "Entities\\Hitbox",
-      "ExposedInDerived": true,
-      "AttachToContainer": true,
-      "GenerateTimedEmit": true,
-      "DefinedByBase": true,
-      "InstantiatedByBase": true,
-      "ContainedObjects": [
-        {
-          "InstanceName": "Slash1",
-          "SourceClassType": "Entities\\Slash",
-          "Properties": [
-            {
-              "Name": "AssociateWithFactory",
-              "Value": true,
-              "Type": "Boolean"
-            },
-            {
-              "Name": "SourceType",
-              "Value": 1,
-              "Type": "SourceType"
-            }
-          ],
-          "InstructionSaves": [
-            {
-              "Type": "float",
-              "Member": "X",
-              "Value": 168.0,
-              "Time": 0.0
-            },
-            {
-              "Type": "float",
-              "Member": "Y",
-              "Value": -56.0,
-              "Time": 0.0
-            }
-          ],
-          "SourceType": 1,
-          "SourceFile": "Entities\\Slash",
-          "AttachToContainer": true,
-          "GenerateTimedEmit": true
-        }
-      ]
     }
   ],
   "Name": "Screens\\Level1",
