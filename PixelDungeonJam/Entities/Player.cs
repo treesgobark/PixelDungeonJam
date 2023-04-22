@@ -1,35 +1,30 @@
-using ANLG.Utilities.FlatRedBall.Extensions;
-using System;
-using System.Collections.Generic;
+using ANLG.Utilities.FlatRedBall.Constants;
+using ANLG.Utilities.FlatRedBall.Controllers;
 using System.Text;
 using FlatRedBall;
 using FlatRedBall.Input;
-using FlatRedBall.Instructions;
-using FlatRedBall.AI.Pathfinding;
 using FlatRedBall.Entities;
-using FlatRedBall.Graphics.Animation;
-using FlatRedBall.Graphics.Particle;
-using FlatRedBall.Math.Geometry;
-using Microsoft.Xna.Framework;
-using PixelDungeonJam.DataTypes;
 using PixelDungeonJam.Factories;
-using System.Diagnostics;
+using PixelDungeonJam.Models.Design;
+using PixelDungeonJam.Utilities.PlayerControllers;
 using Debugger = FlatRedBall.Debugging.Debugger;
 
 namespace PixelDungeonJam.Entities
 {
-    public partial class Player
+    public partial class Player : IHasAnimationControllers<Player, PlayerController>
     {
         private double _lastDamageTime = -1;
-        private double _attackRecoveryTimer = 0;
         private PlayerPointer _pointer;
-        private SpriteDirection _lastDirection = SpriteDirection.Right;
-        private WeaponData _currentWeapon;
+        private string _currentWeaponId;
+        private IWeaponModel _currentWeapon;
         
         private double TimeSinceLastDamage => TimeManager.CurrentScreenSecondsSince(_lastDamageTime);
-        private bool CanAttack => _attackRecoveryTimer <= 0;
-        
-        public int TeamIndex { get; }
+        public int TeamIndex => 0;
+        // ReSharper disable once ConvertToAutoPropertyWhenPossible
+        public Sprite ControllerSprite => SpriteInstance;
+
+        public FourDirections LastDirection { get; set; } = FourDirections.Right;
+        public ControllerCollection<Player, PlayerController> Controllers { get; private set; }
         
         /// <summary>
         /// Initialization logic which is executed only one time for this Entity (unless the Entity is pooled).
@@ -42,73 +37,63 @@ namespace PixelDungeonJam.Entities
             
             _pointer = PlayerPointerFactory.CreateNew();
             _pointer.AttachTo(this);
-            _currentWeapon = WeaponData["Sword1"];
+            _currentWeaponId = "sword_light_wood";
+
+            InitializeControllers();
+        }
+
+        private void InitializeControllers()
+        {
+            Controllers = new ControllerCollection<Player, PlayerController>();
+            Controllers.Add(new Idle(this));
+            Controllers.InitializeStartingController<Idle>();
         }
 
         private void CustomActivity()
         {
             UpdatePointer();
-            UpdateAnimation();
-            UpdateCooldowns();
-            HandleInput();
-        }
-
-        private void UpdateCooldowns()
-        {
-            _attackRecoveryTimer -= TimeManager.SecondDifference;
+            UpdateDirection();
+            Controllers.DoCurrentControllerActivity();
         }
 
         private void HandleInput()
         {
-            switch (InputDevice)
-            {
-                case { DefaultSecondaryActionInput.IsDown: true }:
-                {
-                    if (!CanAttack) { break; }
-
-                    var slash = SlashFactory.CreateNew();
-                    slash.TeamIndex = 0;
-                    
-                    slash.Position = Position.AddY(SpriteOffsetY)
-                                             .Add(Vector2.UnitX.AtAngle(_pointer.Angle)
-                                                             .AtLength(_currentWeapon.Range));
-                    
-                    float dot = Vector2.Dot(Velocity.XY(), _pointer.NormalizedDirection);
-                    if (dot > 0)
-                    {
-                        slash.Velocity = _currentWeapon.VelocityScaling * Velocity.XY().ProjectOnto(_pointer.NormalizedDirection).ToVec3(Velocity.Z);
-                    }
-                    // if (dot < 0)
-                    // {
-                    //     slash.Velocity *= -1;
-                    // }
-                    
-                    slash.RotationZ = _pointer.Angle;
-                    slash.SpriteInstance.AnimationSpeed = 1 / _currentWeapon.AttackDuration;
-                    slash.SpriteInstance.TextureScale *= _currentWeapon.Size;
-                    slash.CircleInstance.Radius *= _currentWeapon.Size;
-                    _attackRecoveryTimer = 1 / _currentWeapon.AttackSpeed;
-                    break;
-                }
-            }
+            // switch (InputDevice)
+            // {
+            //     case { DefaultSecondaryActionInput.IsDown: true }:
+            //     {
+            //         if (!CanAttack) { break; }
+            //
+            //         var slash = SlashFactory.CreateNew();
+            //         slash.TeamIndex = 0;
+            //         
+            //         slash.Position = Position.AddY(SpriteOffsetY)
+            //                                  .Add(Vector2.UnitX.AtAngle(_pointer.Angle)
+            //                                                  .AtLength(_currentWeapon.Range));
+            //         
+            //         float dot = Vector2.Dot(Velocity.XY(), _pointer.NormalizedDirection);
+            //         if (dot > 0)
+            //         {
+            //             slash.Velocity = _currentWeapon.VelocityScaling * Velocity.XY().ProjectOnto(_pointer.NormalizedDirection).ToVec3(Velocity.Z);
+            //         }
+            //         
+            //         slash.RotationZ = _pointer.Angle;
+            //         slash.SpriteInstance.AnimationSpeed = 1 / _currentWeapon.AttackDuration;
+            //         slash.SpriteInstance.TextureScale *= _currentWeapon.Size;
+            //         slash.CircleInstance.Radius *= _currentWeapon.Size;
+            //         _attackRecoveryTimer = 1 / _currentWeapon.AttackSpeed;
+            //         break;
+            //     }
+            // }
         }
 
-        private void UpdateAnimation()
+        private void UpdateDirection()
         {
-            _lastDirection = MovementInput switch
+            LastDirection = MovementInput switch
             {
-                { X: > 0 } => SpriteDirection.Right,
-                { X: < 0 } => SpriteDirection.Left,
-                _ => _lastDirection,
-            };
-            
-            SpriteInstance.CurrentChainName = (MovementInput, _lastDirection) switch
-            {
-                ({ X: 0, Y: 0 }, SpriteDirection.Right) => "IdleRight",
-                ({ X: 0, Y: 0 }, SpriteDirection.Left) => "IdleLeft",
-                (_, SpriteDirection.Right) => "RunRight",
-                (_, SpriteDirection.Left) => "RunLeft",
-                _ => throw new UnreachableException((MovementInput, _lastDirection).ToString()),
+                { X: > 0 } => FourDirections.Right,
+                { X: < 0 } => FourDirections.Left,
+                _ => LastDirection,
             };
         }
 
@@ -153,11 +138,5 @@ namespace PixelDungeonJam.Entities
             SpriteInstance.Blue = 1;
             SpriteInstance.Alpha = 1;
         }
-        
-        // ******** begin private types ********
-        
-        private enum SpriteDirection { Right, Left }
-        
-        // ******** end private types ********
     }
 }

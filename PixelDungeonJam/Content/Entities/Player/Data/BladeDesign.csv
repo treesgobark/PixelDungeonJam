@@ -1,0 +1,3 @@
+"Id (string, required)","Name (string, required)","Damage (float, required)","Attack Time (float, required)",Dps (float)
+blade_light_wood,Wooden Light Blade,15,1,15
+blade_heavy_wood,Wooden Heavy Blade,25,0.5,12.5

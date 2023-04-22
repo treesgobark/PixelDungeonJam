@@ -1,0 +1,2 @@
+"Id (string, required)","Name (string, required)","Description (string, required)","Hilt (string, required)","Crossguard (string, required)","Blade (string, required)"
+sword_light_wood,Wooden Sword,"Not too far from a stick, if we’re being honest.",hilt_wood,crossguard_wood,blade_light_wood

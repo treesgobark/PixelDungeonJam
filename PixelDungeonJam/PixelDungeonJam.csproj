@@ -50,9 +50,25 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>run-sheet</Name>
     </None>
-    <None Include="content\entities\player\knight.achx">
+    <None Include="content\entities\player\data\bladedesign.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>Knight</Name>
+      <Name>BladeDesign</Name>
+    </None>
+    <None Include="content\entities\player\data\crossguarddesign.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>CrossguardDesign</Name>
+    </None>
+    <None Include="content\entities\player\data\hiltdesign.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>HiltDesign</Name>
+    </None>
+    <None Include="content\entities\player\data\sworddesign.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>SwordDesign</Name>
+    </None>
+    <None Include="content\entities\player\knightanimations.achx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>KnightAnimations</Name>
     </None>
     <None Include="content\entities\player\knight\idle\idle-sheet.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -70,9 +86,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>TopDownValuesStatic</Name>
     </None>
-    <None Include="content\entities\player\weapondata.csv">
+    <None Include="content\entities\player\weapondata2.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>WeaponData</Name>
+      <Name>WeaponData2</Name>
     </None>
     <None Include="content\entities\slash\slash.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -388,9 +404,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTypes\BladeDesign.Generated.cs" />
+    <Compile Include="DataTypes\CrossguardDesign.Generated.cs" />
+    <Compile Include="DataTypes\HiltDesign.Generated.cs" />
+    <Compile Include="DataTypes\SwordDesign.Generated.cs" />
     <Compile Include="DataTypes\TileMapInfo.Generated.cs" />
     <Compile Include="DataTypes\TopDownValues.Generated.cs" />
-    <Compile Include="DataTypes\WeaponData.Generated.cs" />
+    <Compile Include="DataTypes\WeaponData2.Generated.cs" />
     <Compile Include="Entities\Enemy.cs" />
     <Compile Include="Entities\Enemy.Generated.cs">
       <DependentUpon>Enemy.cs</DependentUpon>
@@ -669,6 +689,9 @@
     <Compile Include="GumRuntimes\RectangleRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\SpriteRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\TextRuntime.Generated.cs" />
+    <Compile Include="Models\Design\SwordDesign.cs" />
+    <Compile Include="Models\Design\IWeaponModel.cs" />
+    <Compile Include="Models\View\WeaponView.cs" />
     <Compile Include="Performance\IEntityFactory.Generated.cs" />
     <Compile Include="Performance\PoolList.Generated.cs" />
     <Compile Include="Program.cs" />
@@ -716,6 +739,8 @@
     <Compile Include="TopDown\Interfaces.Generated.cs" />
     <Compile Include="TopDown\TopDownAiInput.Generated.cs" />
     <Compile Include="TopDown\TopDownAiTargetLogic.Generated.cs" />
+    <Compile Include="Utilities\PlayerControllers\Idle.cs" />
+    <Compile Include="Utilities\PlayerControllers\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
@@ -764,6 +789,9 @@
       <Name>SkiaInGum</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\source\repos\ANLG.Utilities\ANLG.Utilities.FlatRedBall\ANLG.Utilities.FlatRedBall.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Data" />
   </ItemGroup>
   <!--  <ItemGroup>-->
   <!--    <ProjectReference Include="..\..\..\..\source\repos\ANLG.Utilities\ANLG.Utilities.FlatRedBall\ANLG.Utilities.FlatRedBall.csproj" />-->

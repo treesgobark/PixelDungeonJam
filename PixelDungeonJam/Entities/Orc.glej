@@ -99,6 +99,19 @@
       "DefaultValue": 10.0,
       "SetByDerived": true,
       "DefinedByBase": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "FlashStrength",
+      "DefaultValue": 0.5,
+      "SetByDerived": true,
+      "DefinedByBase": true
     }
   ],
   "Properties": [
@@ -203,14 +216,14 @@
       "InstructionSaves": [
         {
           "Type": "float",
-          "Member": "Width",
-          "Value": 12.0,
+          "Member": "Height",
+          "Value": 24.0,
           "Time": 0.0
         },
         {
           "Type": "float",
-          "Member": "Height",
-          "Value": 24.0,
+          "Member": "Width",
+          "Value": 12.0,
           "Time": 0.0
         },
         {

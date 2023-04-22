@@ -14,8 +14,9 @@
       "ProjectsToExcludeFrom": []
     },
     {
-      "Name": "Entities/Player/Knight.achx",
+      "Name": "Entities/Player/KnightAnimations.achx",
       "IsSharedStatic": true,
+      "HasPublicProperty": true,
       "RuntimeType": "FlatRedBall.Graphics.Animation.AnimationChainList",
       "ProjectsToExcludeFrom": []
     },
@@ -33,10 +34,38 @@
       "ProjectsToExcludeFrom": []
     },
     {
-      "Name": "Entities/Player/WeaponData.csv",
+      "Name": "Entities/Player/WeaponData2.csv",
       "IsSharedStatic": true,
       "CreatesDictionary": true,
-      "SourceFile": "Entities/Player/WeaponData.ods",
+      "SourceFile": "Entities/Player/WeaponData2.ods",
+      "BuildTool": "*.ods -> soffice.exe -> *.csv",
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "Entities/Player/Data/SwordDesign.csv",
+      "IsSharedStatic": true,
+      "SourceFile": "Entities/Player/Data/SwordDesign.ods",
+      "BuildTool": "*.ods -> soffice.exe -> *.csv",
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "Entities/Player/Data/HiltDesign.csv",
+      "IsSharedStatic": true,
+      "SourceFile": "Entities/Player/Data/HiltDesign.ods",
+      "BuildTool": "*.ods -> soffice.exe -> *.csv",
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "Entities/Player/Data/CrossguardDesign.csv",
+      "IsSharedStatic": true,
+      "SourceFile": "Entities/Player/Data/CrossguardDesign.ods",
+      "BuildTool": "*.ods -> soffice.exe -> *.csv",
+      "ProjectsToExcludeFrom": []
+    },
+    {
+      "Name": "Entities/Player/Data/BladeDesign.csv",
+      "IsSharedStatic": true,
+      "SourceFile": "Entities/Player/Data/BladeDesign.ods",
       "BuildTool": "*.ods -> soffice.exe -> *.csv",
       "ProjectsToExcludeFrom": []
     }
@@ -158,7 +187,7 @@
         {
           "Type": "FlatRedBall.Graphics.Animation.AnimationChainList",
           "Member": "AnimationChains",
-          "Value": "Knight",
+          "Value": "KnightAnimations",
           "Time": 0.0
         },
         {
