@@ -46,6 +46,7 @@ namespace PixelDungeonJam.Entities
         {
             Controllers = new ControllerCollection<Player, PlayerController>();
             Controllers.Add(new Idle(this));
+            Controllers.Add(new Run(this));
             Controllers.InitializeStartingController<Idle>();
         }
 

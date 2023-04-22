@@ -741,6 +741,7 @@
     <Compile Include="TopDown\TopDownAiTargetLogic.Generated.cs" />
     <Compile Include="Utilities\PlayerControllers\Idle.cs" />
     <Compile Include="Utilities\PlayerControllers\PlayerController.cs" />
+    <Compile Include="Utilities\PlayerControllers\Run.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
