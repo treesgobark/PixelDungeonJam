@@ -22,9 +22,19 @@ public abstract class PlayerController : AnimationController<Player, PlayerContr
 
     public virtual void HandleInput()
     {
-        if (Parent.InputDevice.DefaultSecondaryActionInput is { WasJustPressed: true })
+        if (Parent.InputDevice.DefaultSecondaryActionInput is { IsDown: true })
         {
             Parent.CurrentWeapon.PrimaryAction(Parent, new Vector2(0, Parent.SpriteOffsetY), Parent.Pointer);
+        }
+
+        if (Parent.InputDevice.DefaultPauseInput is { WasJustPressed: true })
+        {
+            Parent.CycleWeaponForward();
+        }
+
+        if (Parent.InputDevice.DefaultBackInput is { WasJustPressed: true })
+        {
+            Parent.CycleWeaponBackward();
         }
     }
 }

@@ -711,6 +711,7 @@
     <Compile Include="Systems\Weapons\IWeapon.cs" />
     <Compile Include="Systems\Weapons\MeleeWeapon.cs" />
     <Compile Include="Systems\Weapons\Unarmed.cs" />
+    <Compile Include="Systems\Weapons\WeaponCollection.cs" />
     <Compile Include="Systems\Weapons\WeaponProvider.cs" />
     <Compile Include="TileCollisions\CollidableListVsTileShapeCollectionRelationship.Generated.cs" />
     <Compile Include="TileCollisions\CollidableVsTileShapeCollectionRelationship.Generated.cs" />

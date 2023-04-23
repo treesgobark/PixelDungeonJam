@@ -11,13 +11,15 @@ namespace PixelDungeonJam.Systems.Weapons;
 public class MeleeWeapon : IWeapon
 {
     private float _cooldownRemaining = -1;
+    private const float RangeScaleRatio = 1 / 15f;
 
     public MeleeWeapon(SwordDesign swordDesign)
     {
         var hiltLookup = Player.HiltDesign[swordDesign.Hilt];
         var crossguardLookup = Player.CrossguardDesign[swordDesign.Crossguard];
         var bladeLookup = Player.BladeDesign[swordDesign.Blade];
-        
+
+        Id = swordDesign.Id;
         Name = swordDesign.Name;
         Description = swordDesign.Description;
         Damage = bladeLookup.Damage;
@@ -28,6 +30,7 @@ public class MeleeWeapon : IWeapon
         Guard = crossguardLookup.Guard;
     }
 
+    public string Id { get; }
     public string Name { get; }
     public string Description { get; }
     public float Damage { get; }
@@ -66,8 +69,8 @@ public class MeleeWeapon : IWeapon
         
         slash.RotationZ = pointer.Angle;
         slash.SpriteInstance.AnimationSpeed = 1 / AttackDuration;
-        // slash.SpriteInstance.TextureScale *= _currentWeapon.Size;
-        // slash.CircleInstance.Radius *= _currentWeapon.Size;
+        slash.SpriteInstance.TextureScale *= Range * RangeScaleRatio;
+        slash.CircleInstance.Radius *= Range * RangeScaleRatio;
         
         _cooldownRemaining = TotalSecondsPerAttack;
     }

@@ -6,6 +6,7 @@ namespace PixelDungeonJam.Systems.Weapons;
 
 public interface IWeapon
 {
+    string Id { get; }
     string Name { get; }
     string Description { get; }
     bool IsActionable { get; }

@@ -1,2 +1,3 @@
 "Id (string, required)","Name (string, required)","Description (string, required)","Hilt (string, required)","Crossguard (string, required)","Blade (string, required)"
 sword_light_wood,Wooden Sword,"Not too far from a stick, if you’re being honest.",hilt_wood,crossguard_wood,blade_light_wood
+sword_heavy_wood,Heavy Wooden Sword,At least it’s closer to a log than a stick now.,hilt_wood,crossguard_wood,blade_heavy_wood

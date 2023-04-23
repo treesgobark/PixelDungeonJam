@@ -1,12 +1,15 @@
 using ANLG.Utilities.FlatRedBall.Constants;
 using ANLG.Utilities.FlatRedBall.Controllers;
+using ANLG.Utilities.FlatRedBall.NonStaticUtilities;
 using System.Text;
 using FlatRedBall;
 using FlatRedBall.Input;
 using FlatRedBall.Entities;
 using PixelDungeonJam.Factories;
 using PixelDungeonJam.Systems.Weapons;
+using PixelDungeonJam.Utilities;
 using PixelDungeonJam.Utilities.PlayerControllers;
+using System.Collections.Generic;
 using Debugger = FlatRedBall.Debugging.Debugger;
 
 namespace PixelDungeonJam.Entities
@@ -16,7 +19,8 @@ namespace PixelDungeonJam.Entities
         public int TeamIndex => 0;
         // ReSharper disable once ConvertToAutoPropertyWhenPossible
         public Sprite ControllerSprite => SpriteInstance;
-        public IWeapon CurrentWeapon { get; private set; }
+        public WeaponCollection Weapons { get; private set; }
+        public IWeapon CurrentWeapon => Weapons.CurrentItem;
         public PlayerPointer Pointer;
 
         public FourDirections LastDirection { get; set; }
@@ -34,7 +38,9 @@ namespace PixelDungeonJam.Entities
             Pointer = PlayerPointerFactory.CreateNew();
             Pointer.AttachTo(this);
             // CurrentWeapon = new Unarmed();
-            CurrentWeapon = WeaponProvider.Get("sword_light_wood");
+            Weapons = new WeaponCollection();
+            Weapons.LoadWeapon("sword_light_wood");
+            Weapons.LoadWeapon("sword_heavy_wood");
             LastDirection = FourDirections.Right;;
 
             InitializeControllers();
@@ -65,6 +71,24 @@ namespace PixelDungeonJam.Entities
         {
         }
 
+        public void CycleWeaponForward()
+        {
+            if (CurrentWeapon.IsActionable)
+            {
+                Weapons.CycleToNextItem();
+                Debugger.Write($"Switched to {CurrentWeapon.Name}");
+            }
+        }
+
+        public void CycleWeaponBackward()
+        {
+            if (CurrentWeapon.IsActionable)
+            {
+                Weapons.CycleToPreviousItem();
+                Debugger.Write($"Switched to {CurrentWeapon.Name}");
+            }
+        }
+
         private void UpdateWeapon()
         {
             CurrentWeapon.Activity();
@@ -87,7 +111,7 @@ namespace PixelDungeonJam.Entities
             {
                 sb.AppendLine(xbox360GamePad.ToString());
             }
-            Debugger.Write(sb.ToString());
+            // Debugger.Write(sb.ToString());
             float? inputAngle = MovementInput.GetAngle();
             if (inputAngle is not null)
             {

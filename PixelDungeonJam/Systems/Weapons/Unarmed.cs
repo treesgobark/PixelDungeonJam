@@ -6,8 +6,9 @@ namespace PixelDungeonJam.Systems.Weapons;
 
 public class Unarmed : IWeapon
 {
-    public const string Id = "unarmed";
-    
+    public const string WeaponId = "unarmed";
+
+    public string Id => WeaponId;
     public string Name => "Unarmed";
     public string Description => "Imagine if I had a real weapon!";
     public bool IsActionable => false;

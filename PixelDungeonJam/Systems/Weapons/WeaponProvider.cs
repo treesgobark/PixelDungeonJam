@@ -12,7 +12,7 @@ public static class WeaponProvider
     {
         _weapons.Clear();
 
-        _weapons[Unarmed.Id] = new Unarmed();
+        _weapons[Unarmed.WeaponId] = new Unarmed();
 
         foreach (var sword in Player.SwordDesign.Values)
         {
@@ -20,17 +20,22 @@ public static class WeaponProvider
         }
     }
 
-    public static IWeapon Get(string weaponId)
+    public static IWeapon Load(string weaponId)
     {
         if (_weapons.ContainsKey(weaponId))
         {
             return _weapons[weaponId];
         }
 
+        return ForceLoad(weaponId);
+    }
+
+    public static IWeapon ForceLoad(string weaponId)
+    {
         if (Player.SwordDesign.ContainsKey(weaponId))
         {
             var sword = Player.SwordDesign[weaponId];
-;           return _weapons[weaponId] = new MeleeWeapon(sword);
+            return _weapons[weaponId] = new MeleeWeapon(sword);
         }
 
         throw new InvalidOperationException($"Can't find weapon id {weaponId}. Available Weapon Ids: {string.Join(", ", _weapons.Keys)}");
