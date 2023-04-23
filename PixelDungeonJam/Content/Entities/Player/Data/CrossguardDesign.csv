@@ -1,2 +1,2 @@
-Id,Name,Guard
+"Id (string, required)","Name (string, required)","Guard (float, required)"
 crossguard_wood,Wooden Crossguard,0.5

@@ -5,7 +5,7 @@ using FlatRedBall;
 using FlatRedBall.Input;
 using FlatRedBall.Entities;
 using PixelDungeonJam.Factories;
-using PixelDungeonJam.Models.Design;
+using PixelDungeonJam.Systems.Weapons;
 using PixelDungeonJam.Utilities.PlayerControllers;
 using Debugger = FlatRedBall.Debugging.Debugger;
 
@@ -13,17 +13,13 @@ namespace PixelDungeonJam.Entities
 {
     public partial class Player : IHasAnimationControllers<Player, PlayerController>
     {
-        private double _lastDamageTime = -1;
-        private PlayerPointer _pointer;
-        private string _currentWeaponId;
-        private IWeaponModel _currentWeapon;
-        
-        private double TimeSinceLastDamage => TimeManager.CurrentScreenSecondsSince(_lastDamageTime);
         public int TeamIndex => 0;
         // ReSharper disable once ConvertToAutoPropertyWhenPossible
         public Sprite ControllerSprite => SpriteInstance;
+        public IWeapon CurrentWeapon { get; private set; }
+        public PlayerPointer Pointer;
 
-        public FourDirections LastDirection { get; set; } = FourDirections.Right;
+        public FourDirections LastDirection { get; set; }
         public ControllerCollection<Player, PlayerController> Controllers { get; private set; }
         
         /// <summary>
@@ -35,9 +31,11 @@ namespace PixelDungeonJam.Entities
         {
             ReactToDamageReceived += HandleDamageReceived;
             
-            _pointer = PlayerPointerFactory.CreateNew();
-            _pointer.AttachTo(this);
-            _currentWeaponId = "sword_light_wood";
+            Pointer = PlayerPointerFactory.CreateNew();
+            Pointer.AttachTo(this);
+            // CurrentWeapon = new Unarmed();
+            CurrentWeapon = WeaponProvider.Get("sword_light_wood");
+            LastDirection = FourDirections.Right;;
 
             InitializeControllers();
         }
@@ -54,38 +52,22 @@ namespace PixelDungeonJam.Entities
         {
             UpdatePointer();
             UpdateDirection();
+            UpdateWeapon();
             Controllers.DoCurrentControllerActivity();
         }
 
-        private void HandleInput()
+        private void CustomDestroy()
         {
-            // switch (InputDevice)
-            // {
-            //     case { DefaultSecondaryActionInput.IsDown: true }:
-            //     {
-            //         if (!CanAttack) { break; }
-            //
-            //         var slash = SlashFactory.CreateNew();
-            //         slash.TeamIndex = 0;
-            //         
-            //         slash.Position = Position.AddY(SpriteOffsetY)
-            //                                  .Add(Vector2.UnitX.AtAngle(_pointer.Angle)
-            //                                                  .AtLength(_currentWeapon.Range));
-            //         
-            //         float dot = Vector2.Dot(Velocity.XY(), _pointer.NormalizedDirection);
-            //         if (dot > 0)
-            //         {
-            //             slash.Velocity = _currentWeapon.VelocityScaling * Velocity.XY().ProjectOnto(_pointer.NormalizedDirection).ToVec3(Velocity.Z);
-            //         }
-            //         
-            //         slash.RotationZ = _pointer.Angle;
-            //         slash.SpriteInstance.AnimationSpeed = 1 / _currentWeapon.AttackDuration;
-            //         slash.SpriteInstance.TextureScale *= _currentWeapon.Size;
-            //         slash.CircleInstance.Radius *= _currentWeapon.Size;
-            //         _attackRecoveryTimer = 1 / _currentWeapon.AttackSpeed;
-            //         break;
-            //     }
-            // }
+            Pointer.Destroy();
+        }
+
+        private static void CustomLoadStaticContent(string contentManagerName)
+        {
+        }
+
+        private void UpdateWeapon()
+        {
+            CurrentWeapon.Activity();
         }
 
         private void UpdateDirection()
@@ -96,15 +78,6 @@ namespace PixelDungeonJam.Entities
                 { X: < 0 } => FourDirections.Left,
                 _ => LastDirection,
             };
-        }
-
-        private void CustomDestroy()
-        {
-            _pointer.Destroy();
-        }
-
-        private static void CustomLoadStaticContent(string contentManagerName)
-        {
         }
 
         private void UpdatePointer()
@@ -118,18 +91,17 @@ namespace PixelDungeonJam.Entities
             float? inputAngle = MovementInput.GetAngle();
             if (inputAngle is not null)
             {
-                // _pointer.SpriteInstance.Visible = true;
-                _pointer.Angle = inputAngle.Value;
+                // Pointer.SpriteInstance.Visible = true;
+                Pointer.Angle = inputAngle.Value;
             }
             // else
             // {
-            //     _pointer.SpriteInstance.Visible = false;
+            //     Pointer.SpriteInstance.Visible = false;
             // }
         }
         
         private async void HandleDamageReceived(decimal arg1, IDamageArea arg2)
         {
-            _lastDamageTime = TimeManager.CurrentScreenTime;
             TakeDamage.Play();
             SpriteInstance.Green = 1 - FlashStrength;
             SpriteInstance.Blue = 1 - FlashStrength;

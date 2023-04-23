@@ -1,5 +1,6 @@
-using FlatRedBall.Graphics.Animation;
+using Microsoft.Xna.Framework;
 using PixelDungeonJam.Entities;
+using System;
 
 namespace PixelDungeonJam.Utilities.PlayerControllers;
 
@@ -16,6 +17,6 @@ public class Idle : PlayerController
             return Get<Run>();
         }
         
-        return base.EvaluateExitConditions();
+        return null;
     }
 }
